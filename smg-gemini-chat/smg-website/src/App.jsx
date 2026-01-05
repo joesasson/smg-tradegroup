@@ -27,60 +27,7 @@ const App = () => {
     };
     window.addEventListener('scroll', handleScroll);
 
-    const script = document.createElement('script');
-    script.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js";
-    const triggerScript = document.createElement('script');
-    triggerScript.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js";
-    
-    script.onload = () => {
-      document.head.appendChild(triggerScript);
-      triggerScript.onload = () => {
-        initAnimations();
-      };
-    };
-    document.head.appendChild(script);
-
-    const initAnimations = () => {
-      const gsap = window.gsap;
-      const ScrollTrigger = window.ScrollTrigger;
-      gsap.registerPlugin(ScrollTrigger);
-
-      gsap.from(".hero-title span", {
-        y: 100,
-        opacity: 0,
-        duration: 1.2,
-        stagger: 0.1,
-        ease: "power4.out"
-      });
-
-      gsap.to(".hero-image", {
-        yPercent: 20,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".hero-container",
-          start: "top top",
-          end: "bottom top",
-          scrub: true
-        }
-      });
-
-      sectionRefs.current.forEach((section) => {
-        if (!section) return;
-        const reveals = section.querySelectorAll(".reveal");
-        gsap.from(reveals, {
-          y: 40,
-          opacity: 0,
-          duration: 1,
-          stagger: 0.15,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 85%",
-            toggleActions: "play none none none"
-          }
-        });
-      });
-    };
+    // Disabled GSAP animations to fix visibility and scrolling issues
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -92,13 +39,13 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#FBF9F7] text-[#0A0A0A] font-sans selection:bg-[#0A0A0A] selection:text-white">
+    <div className="bg-[#FBF9F7] text-[#0A0A0A] font-sans selection:bg-[#0A0A0A] selection:text-white">
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 px-6 md:px-12 flex justify-between items-center ${
+      <nav className={`fixed w-full z-40 transition-all duration-300 px-6 md:px-12 flex justify-between items-center ${
         isScrolled 
         ? "bg-white/90 backdrop-blur-xl border-b border-gray-100 h-20 shadow-sm" 
         : "bg-transparent h-24 text-white"
-      }`}>
+      }`} style={{ top: '80px' }}>
         <div className={`text-xl font-black tracking-tighter uppercase transition-colors duration-300 ${isScrolled ? 'text-black' : 'text-white'}`}>
           SMG<span className="text-[#C5A27D]">.</span>Group
         </div>
@@ -125,7 +72,7 @@ const App = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="hero-container relative h-screen flex flex-col justify-end px-6 md:px-12 pb-20 overflow-hidden bg-black pt-24 md:pt-32">
+      <section className="hero-container relative min-h-screen flex flex-col justify-center px-6 md:px-12 pb-20 bg-black" style={{ paddingTop: '176px' }}>
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/10 z-10"></div>
           <img 
@@ -144,7 +91,7 @@ const App = () => {
           
           <h1 className="hero-title text-[14vw] md:text-[10vw] font-black leading-[0.8] tracking-tighter uppercase text-white mb-12 drop-shadow-2xl">
             <span className="block">Liquidate</span>
-            <span className="block italic text-transparent stroke-white ml-[5vw] opacity-80" style={{ WebkitTextStroke: '1.5px white' }}>Inventory</span>
+            <span className="block italic text-white ml-[5vw]">Inventory</span>
           </h1>
           
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 border-t border-white/20 pt-12">

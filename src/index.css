@@ -5,22 +5,29 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-y: auto !important;
   }
   
   body {
     margin: 0;
-    width: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-y: auto !important;
   }
   
   #root {
     width: 100%;
+    overflow-y: auto !important;
   }
 }
 
+/* Version content should allow scrolling */
+.version-content {
+  overflow-y: visible !important;
+  overflow-x: hidden;
+}
+
 /* Position version headers below the showcase navbar */
-/* Target fixed headers and navs within version content */
 .version-content header[class*="fixed"],
 .version-content nav[class*="fixed"] {
   top: 80px !important;

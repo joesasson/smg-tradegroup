@@ -23,7 +23,8 @@ function App() {
         const targetId = href.substring(1);
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
-          const headerOffset = 80;
+          // Account for showcase navbar (80px) + version header height (~72px)
+          const headerOffset = 152;
           const elementPosition = targetElement.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 

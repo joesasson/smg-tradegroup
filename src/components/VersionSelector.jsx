@@ -5,6 +5,7 @@ const versions = [
   { id: 'version-2', name: 'cursor-claude', path: '/version-2' },
   { id: 'version-3', name: 'smg-gemini-chat', path: '/version-3' },
   { id: 'version-4', name: 'smg-gemini-cursor', path: '/version-4' },
+  { id: 'version-5', name: 'smg-gemini-studio', path: '/version-5' },
 ]
 
 export default function VersionSelector() {
