@@ -429,7 +429,8 @@ const Contact = () => {
       </div>
     </div>
   </section>
-);
+  );
+};
 
 const Footer = () => (
   <footer className="bg-slate-950 pt-32 pb-16 text-white border-t border-white/5">
@@ -493,80 +494,6 @@ const Footer = () => (
         </div>
       </div>
       
-      <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-600 text-[10px] font-extrabold uppercase tracking-[0.2em]">
-        <p>© {new Date().getFullYear()} SMG TRADE GROUP. ALL RIGHTS RESERVED.</p>
-        <div className="flex gap-10">
-          <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-          <a href="#" className="hover:text-white transition-colors">Sitemap</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-);
-
-const Footer = () => (
-  <footer className="bg-slate-950 pt-32 pb-16 text-white border-t border-white/5">
-    <div className="container mx-auto px-6 md:px-12">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
-        <div className="lg:col-span-1">
-          <div className="flex items-center gap-3 mb-10">
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-blue-600/20">
-              <div className="w-5 h-5 border-[3px] border-white rotate-45"></div>
-            </div>
-            <span className="text-white font-extrabold tracking-tighter text-3xl uppercase">SMG</span>
-          </div>
-          <p className="text-slate-500 max-w-sm mb-10 leading-relaxed text-lg font-light">
-            The industry standard for strategic inventory liquidation and global asset recovery.
-          </p>
-          <div className="flex gap-4">
-            {[Linkedin, Twitter, Instagram].map((Icon, i) => (
-              <div key={i} className="h-12 w-12 rounded-xl border border-white/10 flex items-center justify-center hover:bg-white hover:text-slate-950 transition-all cursor-pointer group">
-                <Icon size={20} />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div>
-          <h4 className="font-extrabold mb-10 uppercase tracking-[0.2em] text-[10px] text-blue-500">Solutions</h4>
-          <ul className="space-y-6 text-slate-400 font-medium">
-            <li><a href="#" className="hover:text-white transition-colors">Retailer Liquidation</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">Asset Recovery</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">Bulk Inventory Buying</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">Logistics Support</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="font-extrabold mb-10 uppercase tracking-[0.2em] text-[10px] text-blue-500">Main Pages</h4>
-          <ul className="space-y-6 text-slate-400 font-medium">
-            <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">About SMG</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">Inventory Catalog</a></li>
-            <li><a href="#contact" className="hover:text-white transition-colors">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="font-extrabold mb-10 uppercase tracking-[0.2em] text-[10px] text-blue-500">Reach Out</h4>
-          <ul className="space-y-6 text-slate-400 font-medium">
-            <li className="flex items-center gap-4">
-              <Mail size={16} className="text-blue-500" />
-              sm@smgtradegroup.com
-            </li>
-            <li className="flex items-center gap-4">
-              <Phone size={16} className="text-blue-500" />
-              +1 555-801-6189
-            </li>
-            <li className="flex items-center gap-4">
-              <Globe2 size={16} className="text-blue-500" />
-              New York, USA
-            </li>
-          </ul>
-        </div>
-      </div>
-
       <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-600 text-[10px] font-extrabold uppercase tracking-[0.2em]">
         <p>© {new Date().getFullYear()} SMG TRADE GROUP. ALL RIGHTS RESERVED.</p>
         <div className="flex gap-10">
