@@ -8,15 +8,17 @@ import Version4 from './versions/Version4'
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen">
+      <div className="min-h-screen w-full">
         <NavBar />
-        <Routes>
-          <Route path="/" element={<Navigate to="/version-1" replace />} />
-          <Route path="/version-1" element={<Version1 />} />
-          <Route path="/version-2" element={<Version2 />} />
-          <Route path="/version-3" element={<Version3 />} />
-          <Route path="/version-4" element={<Version4 />} />
-        </Routes>
+        <div className="pt-20 w-full version-content">
+          <Routes>
+            <Route path="/" element={<Navigate to="/version-1" replace />} />
+            <Route path="/version-1" element={<Version1 />} />
+            <Route path="/version-2" element={<Version2 />} />
+            <Route path="/version-3" element={<Version3 />} />
+            <Route path="/version-4" element={<Version4 />} />
+          </Routes>
+        </div>
       </div>
     </BrowserRouter>
   )

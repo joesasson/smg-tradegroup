@@ -9,7 +9,20 @@
   
   body {
     margin: 0;
+    width: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  
+  #root {
+    width: 100%;
+  }
+}
+
+/* Position version headers below the showcase navbar */
+/* Target fixed headers and navs within version content */
+.version-content header[class*="fixed"],
+.version-content nav[class*="fixed"] {
+  top: 80px !important;
+  z-index: 40 !important;
 }

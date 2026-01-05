@@ -1,10 +1,10 @@
 import { useNavigate, useLocation } from 'react-router-dom'
 
 const versions = [
-  { id: 'version-1', name: 'Version 1', path: '/version-1' },
-  { id: 'version-2', name: 'Version 2', path: '/version-2' },
-  { id: 'version-3', name: 'Version 3', path: '/version-3' },
-  { id: 'version-4', name: 'Version 4', path: '/version-4' },
+  { id: 'version-1', name: 'Cursor-Auto', path: '/version-1' },
+  { id: 'version-2', name: 'cursor-claude', path: '/version-2' },
+  { id: 'version-3', name: 'smg-gemini-chat', path: '/version-3' },
+  { id: 'version-4', name: 'smg-gemini-cursor', path: '/version-4' },
 ]
 
 export default function VersionSelector() {
